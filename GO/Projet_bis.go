@@ -1,5 +1,6 @@
 package main
 
+/*
 import (
 	"fmt"
 	"os"
@@ -73,3 +74,4 @@ func main() {
 	//b := [][]int{[]int{1, 1, 5}, []int{1, 2, 4}, []int{1, 2, 4}}
 	fmt.Print(ReadMatrix("MatriceA.txt"))
 }
+*/
