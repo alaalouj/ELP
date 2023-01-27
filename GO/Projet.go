@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
-	"strings"
+	"sync"
 )
 
 // Récuperation d'une matrice dans un fichier texte
+/*
 func TxtToMatrix(fichier string) [][]int {
 	data, err := ioutil.ReadFile(fichier)
 	lines := string(data)
@@ -18,37 +18,52 @@ func TxtToMatrix(fichier string) [][]int {
 
 	}
 
+}*/
+
+// Fonction goroutine :
+func multiply(a, b, ab [][]int, row, col int, wg *sync.WaitGroup) {
+	//Multiplication de a et b
+	defer wg.Done()
+	sum := 0
+	for i := 0; i < len(a[0]); i++ {
+		sum += a[row][i] * b[i][col]
+	}
+	ab[row][col] = sum
 }
 
 // Multiplication d'un matrice a de taille m*n avec une matrice b de taille p*q
-func MultiplicationMatrix(a [][]int, b [][]int) [][]int {
-	m := len(a)
+func MultiplicationMatrix(a, b [][]int) {
+	m := len(a) //nombre de lignes __
 	n := len(a[0])
 	p := len(b)
-	q := len(b[0])
+	q := len(b[0]) // ||
 	//Verification que les matrices a et b aient des tailles compatibles
 	if n != p {
 		fmt.Println("Erreur de taille")
 		os.Exit(1)
 	}
-	//Création de la mtrice a*b
+	//Création de la matrice a*b
 	ab := make([][]int, m)
 	for ligne := range ab {
 		ab[ligne] = make([]int, q)
 	}
-	//Multiplication de a et b
-	for i := 0; i < m; i++ {
-		for k := 0; k < n; k++ {
-			for j := 0; j < q; j++ {
-				ab[i][j] += a[i][k] * b[k][j]
-			}
+
+	// en utilisant les goroutines :
+
+	var wg sync.WaitGroup
+	for i := 0; i < len(a); i++ {
+		for j := 0; j < len(b[0]); j++ {
+			wg.Add(1)
+			go multiply(a, b, ab, i, j, &wg)
 		}
 	}
-	return ab
+	wg.Wait()
+	fmt.Println("Result: ", ab)
+
 }
 
 func main() {
-	a := [][]int{[]int{1, 2, 3}, []int{3, 2, 1}, []int{2, 1, 1}}
-	b := [][]int{[]int{1, 1}, []int{1, 2}}
-	fmt.Println(MultiplicationMatrix(a, b))
+	a := [][]int{{1, 2, 3}, {3, 2, 1}, {5, 3, 2}}
+	b := [][]int{{1, 1, 1}, {1, 2, 5}, {1, 2, 5}}
+	MultiplicationMatrix(a, b)
 }
