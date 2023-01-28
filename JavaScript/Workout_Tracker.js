@@ -20,7 +20,8 @@ function workoutTracker() {
       workoutTracker();
     }
   });*/
-  console.log('Welcome, this is your workout tracker, please select an action :s');
+  console.log("Please select an action below :")
+  
 }
 
 function addWorkout() {
