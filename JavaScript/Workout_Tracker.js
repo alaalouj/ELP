@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 console.log("Welcome to the Workout Tracker CLI!");
 
 function workoutTracker() {
-  rl.question('What action would you like to perform? (add, list, quit) ', (action) => {
+  /*rl.question('What action would you like to perform? (add, list, quit) ', (action) => {
     if (action === "add") {
       addWorkout();
     } else if (action === "list") {
@@ -19,7 +19,8 @@ function workoutTracker() {
       console.log("Invalid action. Please choose 'add', 'list', or 'quit'");
       workoutTracker();
     }
-  });
+  });*/
+  console.log('Welcome, this is your workout tracker, please select an action :s');
 }
 
 function addWorkout() {
@@ -27,12 +28,12 @@ function addWorkout() {
     // console.log(`Adding ${workout} to your workout list...`);
     // code to add workout to list here
     rl.question("Enter the number of sets: ", function(sets) {
-        rl.question("Enter the number of reps: ", function(reps) {
-            rl.question("Enter the weight ")
-                console.log(`Exercise added: ${workout}, Sets: ${sets}, Reps: ${reps}`);
-                rl.close();
-            });
+      rl.question("Enter the number of reps: ", function(reps) {
+        rl.question("Enter the weight ", function(weight){
+          console.log(`Exercise added: ${workout}, Sets: ${sets}, Reps: ${reps}`);
+            rl.close();
         });
+      });
     });
     workoutTracker();
   });
