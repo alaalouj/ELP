@@ -1,0 +1,208 @@
+You could use the child_process.exec() function to :
+    open the default web browser and navigate to a specific website, such as a workout video or a fitness tracker website.
+    open a specific application on the user's computer, such as a music player or a timer application.
+    set a reminder or an alarm for the user to take breaks or to remind them of the next workout session.
+    check the weather forecast, so the user knows if they can train outside or if they need to train indoors.
+    access the system's calendar and schedule the workout session.
+    
+    A function that displays a list of exercises for the user to choose from.
+A function that allows the user to set a timer for a specific exercise.
+A function that allows the user to track their progress by logging the number of sets and reps they have completed.
+A function that allows the user to view their workout history.
+A function that allows the user to set reminders or alarms to remind them of their next workout session.
+
+
+menu :
+- Start Session
+- Schedule Session
+- View Old Sessions
+- Track Progress
+- Show List of exercices
+
+
+Schedule Session :
+Set Date (/Time??)
+Choose muscle group :  
+    - Push
+        - Push-ups
+            How many sets? -> type number
+        - Shoulder press
+        - Dumbbell bench press
+        - Dumbbell chest fly
+        - Dumbbell overhead triceps extension
+        - Dumbbell lateral raise
+    - Pull
+        - Pull-ups
+        - Deadlifts
+        - Lat Pulldowns
+        - Barbell Rows
+        - Dumbbell Rows
+        - Pullovers
+        - Dumbbell Shrugs
+        - Face Pulls
+        - Barbbell Biceps Curls
+        - Dumbbell Preacher Curls
+        - Cable Curls
+    - Legs
+        - Barbell Bulgarian Split Squat
+        - Seated Dumbbell Calf Raise
+        - Romanian Deadlift
+        - Goblet Squat
+        - Barbell Side Lunge
+        - Hip Thruster
+        - Leg Curl
+        - Leg Extension
+        - Prowler Push
+        - Sumo Squat
+        - Hack Squat
+        - Box Jumps
+        - Box Squats
+        - Skipping
+        - Sumo Deadlift
+PR goal? (y/n) :
+    n -> exit
+    y -> choose from the previous choices
+Set reminder/alarm (for Time-1h ??)
+
+
+
+
+Start Session :
+Choose a scheduled session :
+    (find in the database sessions scheduled)
+Press S to Start
+Select an action :
+    - Start an exercise
+        - Start Rep
+        - Rest
+        - Play Music (if not playing)
+        - Save Perfs
+            - What set Number?
+                - 1
+                - 2
+                - 3...(depending on exercise)
+            - What weight? -> type answer
+                - if w > w^(-1) : print(Congrats, new PR)
+            - How many reps? -> type answer
+            - exit
+        - End exercise
+    - Play Music (if not playing)
+    - Check previous sessions perfs
+    - End Session and save
+    
+    
+View old sessions:
+Choose a Muscle Group :
+    - Push
+        - Session of DD/MM/YYYY
+            Select an exercise :
+                - Push-ups
+                    Set 1 : R  reps
+                    Set S : R' reps
+                - Dumbbell chest fly
+                - Dumbbell overhead triceps extension
+                - Dumbbell lateral raise
+        - Session of DD/MM/YYYY
+        - Session of DD/MM/YYYY
+    - Pull
+        - Session of DD/MM/YYYY
+        - Session of DD/MM/YYYY
+        - Session of DD/MM/YYYY
+    - Legs
+        - Session of DD/MM/YYYY
+        - Session of DD/MM/YYYY
+        - Session of DD/MM/YYYY
+        - Session of DD/MM/YYYY
+        
+
+
+
+Track Progress...
+Weight
+Graphs
+
+
+
+
+
+
+
+Show List of exercices
+Choose muscle group :  
+    - Push
+        - Push-ups
+            - PR : w kgs r reps on the DD/MM/YYYY
+        - Shoulder press
+        - Dumbbell bench press
+        - Dumbbell chest fly
+        - Dumbbell overhead triceps extension
+        - Dumbbell lateral raise
+    - Pull
+        - Pull-ups
+        - Deadlifts
+        - Lat Pulldowns
+        - Barbell Rows
+        - Dumbbell Rows
+        - Pullovers
+        - Dumbbell Shrugs
+        - Face Pulls
+        - Barbbell Biceps Curls
+        - Dumbbell Preacher Curls
+        - Cable Curls
+    - Legs
+        - Barbell Bulgarian Split Squat
+        - Seated Dumbbell Calf Raise
+        - Romanian Deadlift
+        - Goblet Squat
+        - Barbell Side Lunge
+        - Hip Thruster
+        - Leg Curl
+        - Leg Extension
+        - Prowler Push
+        - Sumo Squat
+        - Hack Squat
+        - Box Jumps
+        - Box Squats
+        - Skipping
+        - Sumo Deadlift
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

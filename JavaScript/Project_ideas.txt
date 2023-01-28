@@ -1,0 +1,15 @@
+    A to-do list manager: Create a command-line interface that allows users to add, view, and mark tasks as complete. *
+
+    A weather app: Use a weather API to build a command-line interface that allows users to check the current weather or forecast for a specific location. **
+
+    A workout tracker: Create a command-line interface that allows users to log and track their workouts, including exercises, sets, and reps. **
+
+    A currency converter: Build a command-line interface that allows users to convert between different currencies using up-to-date exchange rates.
+
+    A quiz game: Create a command-line interface that presents users with multiple-choice questions on various topics and keeps track of their scores.
+
+    A note taking app: Build a command-line interface that allows users to create, view, and edit notes, and save them to a file.
+    
+    A network scanner: Create a command-line interface that allows users to scan their local network for connected devices, including IP addresses, hostnames, and MAC addresses. This could be useful for network administrators to quickly identify and troubleshoot issues on their network. ***
+    
+    A GNS3 topology launcher: Build a command-line interface that allows users to launch, stop, and save GNS3 topologies with just a few commands. *
